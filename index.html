@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Laura - Panel de Automatización</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    <div class="min-h-screen flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 bg-teal-800 text-white p-6">
+            <div class="flex items-center gap-3 mb-8">
+                <i class="fa-solid fa-tooth text-2xl text-teal-300"></i>
+                <h1 class="text-xl font-bold">Dental Laura</h1>
+            </div>
+            <nav class="space-y-3">
+                <a href="#" class="flex items-center gap-3 bg-teal-700 p-3 rounded-lg font-medium"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="#" class="flex items-center gap-3 hover:bg-teal-700 p-3 rounded-lg font-medium opacity-80 hover:opacity-100"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
+                <a href="#" class="flex items-center gap-3 hover:bg-teal-700 p-3 rounded-lg font-medium opacity-80 hover:opacity-100"><i class="fa-solid fa-comment-dots"></i> Automatización WhatsApp</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-10 space-y-8">
+            <header class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Gestión de Citas y Pacientes</h2>
+                    <p class="text-slate-500 text-sm">Control de inasistencias y seguimiento de tratamientos</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs px-3 py-1.5 rounded-full font-semibold">Google Calendar Conectado</span>
+                </div>
+            </header>
+
+            <!-- Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Inasistencia Actual</p>
+                    <p class="text-3xl font-extrabold text-rose-600 mt-2">12% <span class="text-xs text-slate-400 font-normal">(Antes 30%)</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Citas Confirmadas (Hoy)</p>
+                    <p class="text-3xl font-extrabold text-teal-600 mt-2">8 / 10</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Tratamientos Reactivados</p>
+                    <p class="text-3xl font-extrabold text-emerald-600 mt-2">15 pacientes</p>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="p-6 border-b border-slate-100">
+                    <h3 class="font-bold text-lg text-slate-800">Próximas Citas para Confirmar</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-50 text-slate-500 uppercase text-xs">
+                            <tr>
+                                <th class="p-4">Paciente</th>
+                                <th class="p-4">Tratamiento</th>
+                                <th class="p-4">Hora</th>
+                                <th class="p-4">Estado</th>
+                                <th class="p-4">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="p-4 font-medium">Carlos Mendoza</td>
+                                <td class="p-4 text-slate-600">Endodoncia (Sesión 2)</td>
+                                <td class="p-4">10:00 AM</td>
+                                <td class="p-4"><span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-full font-medium">Pendiente</span></td>
+                                <td class="p-4"><button class="bg-teal-600 hover:bg-teal-700 text-white text-xs px-3 py-1.5 rounded-md transition">Enviar Recordatorio</button></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium">María Delgado</td>
+                                <td class="p-4 text-slate-600">Ortodoncia</td>
+                                <td class="p-4">11:30 AM</td>
+                                <td class="p-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-medium">Confirmada</span></td>
+                                <td class="p-4"><span class="text-slate-400 text-xs">Listo</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
